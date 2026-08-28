@@ -233,7 +233,7 @@ Copyright © 2026 JindaSoft (Pty) Ltd. All rights reserved. No permission is gra
 
 [License shield url]: https://img.shields.io/badge/License-Proprietary-red?style=flat
 [License url]: ./LICENSE
-[JindaSoft Consulting Website OpenGraph image url]: ./assets/og-image.jpg
+[JindaSoft Consulting Website OpenGraph image url]: ./public/assets/og-image.jpg
 [JindaSoft Consulting Website url]: https://github.com/sherpadNdabambi/jindasoft-consulting-website
 [HTML5 shield url]: https://img.shields.io/badge/HTML5-e54c22?style=for-the-badge&logo=html5&logoColor=white
 [HTML5 url]: https://html.spec.whatwg.org/multipage

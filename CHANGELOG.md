@@ -4,6 +4,16 @@ All notable changes to the JindaSoft Consulting Website will be documented in th
 
 The format is based on [Keep a Changelog][Keep a Changelog url], and this project adheres to [Semantic Versioning][Semantic Versioning url].
 
+### Fixed
+
+## [1.0.1] (28 August 2026)
+
+### Fixed
+
+1. Horizontal side-scrolling on mobile — `overflow-x: hidden` was applied only to `body`, which does not prevent the `html` root element from scrolling horizontally; the property is now set on both `html` and `body` in `reset.css`.
+2. Hero highlights grid could force a column wider than the viewport on narrow screens because `minmax(200px, 1fr)` uses a hard 200 px minimum; replaced with `minmax(min(200px, 100%), 1fr)` so the minimum never exceeds the available container width.
+3. `og:image` and `twitter:image` meta tags referenced `assets/og-image.png`, which does not exist; corrected to `assets/og-image.jpg` so social-media scrapers (Facebook, WhatsApp, X) receive a valid JPEG content type.
+
 ## [1.0.0] (28 August 2026)
 
 ### Added
@@ -33,4 +43,5 @@ The format is based on [Keep a Changelog][Keep a Changelog url], and this projec
 
 [Keep a Changelog url]: https://keepachangelog.com/en/1.0.0/
 [Semantic Versioning url]: https://semver.org/spec/v2.0.0.html
+[1.0.1]: https://github.com/JindaSoft-Consulting/jindasoft-consulting-website/releases/tag/v1.0.1
 [1.0.0]: https://github.com/JindaSoft-Consulting/jindasoft-consulting-website/releases/tag/v1.0.0
