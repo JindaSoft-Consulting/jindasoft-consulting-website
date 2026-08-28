@@ -95,13 +95,15 @@ Before initiating the deployment procedure, verify that the following prerequisi
 
 ### Cloudflare Pages Settings
 
-| Configuration Option       | Production Value  | Note                                       |
-| :------------------------- | :---------------- | :----------------------------------------- |
-| **Framework Preset**       | `Vite`            | Identifies the application build framework |
-| **Build Command**          | `npm run build`   | Runs `tsc -b && vite build`                |
-| **Build Output Directory** | `dist`            | Generated bundle folder                    |
-| **Production Branch**      | `main`            | Production branch                          |
-| **Environment Variable**   | `NODE_VERSION=20` | Guarantees modern Node runtime             |
+| Configuration Option       | Production Value  | Note                                                                                      |
+| :------------------------- | :---------------- | :---------------------------------------------------------------------------------------- |
+| **Framework Preset**       | `None`            | Cloudflare has no standalone Vite preset; build settings are entered manually (see below) |
+| **Build Command**          | `npm run build`   | Runs `tsc -b && vite build`                                                               |
+| **Build Output Directory** | `dist`            | Generated bundle folder                                                                   |
+| **Production Branch**      | `main`            | Production branch                                                                         |
+| **Environment Variable**   | `NODE_VERSION=20` | Guarantees modern Node runtime                                                            |
+
+> **Note on Framework Preset**: Cloudflare's preset list does not include a standalone Vite option — presets like "React (Vite)" or "Vue" are framework-specific bundles. For a vanilla HTML/TypeScript/Vite project, select **None** and specify the build command and output directory manually. The preset is cosmetic; it only pre-populates those two fields.
 
 ### Build Pipeline Flow
 
@@ -265,7 +267,7 @@ git push -u origin main
 4. Configure production build settings:
    - **Project Name**: `jindasoft-consulting-website`
    - **Production Branch**: `main`
-   - **Framework Preset**: `Vite`
+   - **Framework Preset**: `None`
    - **Build Command**: `npm run build`
    - **Build Output Directory**: `dist`
    - **Environment Variables**:
